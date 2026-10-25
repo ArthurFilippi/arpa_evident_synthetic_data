@@ -1,0 +1,5 @@
+file,participant_id,modality,timepoint,error,what_is_wrong,expected_outcome,expected_code,where_flagged
+EV-002_psg_D0.csv,EV-002,psg,D0,non_numeric,two numeric cells hold text and a decimal comma,reject,non_numeric,"Ledger (reject + reason), quarantine, Audit rejected list"
+EV-003_acti_D+1.csv,EV-003,acti,D+1,identity_mismatch,"the file says EV-005, the file name and form say EV-003",reject,identity_mismatch,"Ledger (reject + reason), quarantine, Audit rejected list"
+EV-004_eeg_D0.csv,EV-004,eeg,D0,partial_columns,all REM_ columns (36 features) are missing,"accept, status stays received",features_absent,"Completeness (received), Audit blocked list, assistant briefing"
+EV-005_cytof_D-2.csv,EV-005,cytof,D-2,column_typo,one feature column name has a typo,reject,unknown_features,"Ledger (reject + reason), quarantine, Audit rejected list"

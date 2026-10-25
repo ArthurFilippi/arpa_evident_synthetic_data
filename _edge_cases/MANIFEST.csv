@@ -1,0 +1,13 @@
+case,file,participant_id,modality,timepoint,new_version_flag,expected_outcome,expected_code,note
+01,edge_01_cytof_unknown_column.csv,EV-001,cytof,D-2,false,reject,unknown_features,a column that is not in the CyTOF contract
+02,edge_02_eeg_partial_features.csv,EV-002,eeg,D0,true,supersede,features_absent,"REM columns missing: accepted as a new version, status stays received, completeness shows it as partial"
+03,edge_03_psg_non_numeric.csv,EV-003,psg,D0,false,reject,non_numeric,text and a decimal comma in numeric cells
+04,edge_04_mri_two_rows.csv,EV-004,mri,D0,false,reject,row_count,two acquisitions pasted in one file
+05,edge_05_acti_identity_mismatch.csv,EV-001,acti,D-1,false,reject,identity_mismatch,"the file says EV-002, the form says EV-001"
+06,edge_06_eeg_same_content_aliases_bom.csv,EV-001,eeg,D-2,false,skip,identical,"same values as the stored acquisition: aliases, BOM, another column order, padded headers; nothing is written"
+07a,edge_07_mri_changed_values.csv,EV-002,mri,D+2,false,conflict,exists,"different values for a stored acquisition, no new-version flag: refused"
+07b,edge_07_mri_changed_values.csv,EV-002,mri,D+2,true,supersede,,"same file with the new-version flag: stored as EV-002_mri_D+2.v2.csv, the first file is untouched"
+08,edge_08_mri_unplanned_timepoint.csv,EV-001,mri,D-1,false,reject,not_in_protocol,"MRI is planned at D-2, D0 and D+2 only"
+09,edge_09_cytof_semicolon.csv,EV-003,cytof,D+2,false,reject,delimiter,a spreadsheet export with semicolons
+10,edge_10_wrong_modality.csv,EV-004,acti,D+2,false,reject,unknown_features,an EEG feature table declared as actigraphy
+11,edge_11_unknown_participant.csv,EV-009,psg,D+2,false,reject,unknown_participant,EV-009 is not in the roster
