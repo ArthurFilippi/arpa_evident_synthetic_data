@@ -4,7 +4,7 @@
 
 This repository contains fully synthetic, multimodal data designed to simulate the ARPA-EVIDENT study workflow on its real timepoints. It includes 143 fictional participants (`ARPA_001` through `ARPA_143`), with modality-specific acquisitions collected at the study days of the protocol. Each acquisition is stored as a CSV file named `{participant_id}_{modality}_{timepoint}.csv` (CyTOF has no timepoint in its name: one file holds the three timepoints of a patient).
 
-The repository contains 10,516 primary acquisition files. A patient only has the files of the days it has lived (`last_study_day` in [`roster.csv`](roster.csv)): 87 patients are completed (D+28), the other 56 are spread over the study, so that every day has patients. About 0.4 % of the cells are empty (not measured), and half of the one-row files list their columns in another order, as different instruments do. Everything is a pure function of (patient, modality, study day): regenerating gives the same bytes.
+The repository contains 10,516 primary acquisition files. A patient only has the files of the days it has lived (`last_study_day` in [`roster.csv`](roster.csv)): 87 patients have lived the whole study (D+28), the other 56 are spread over the study, so that every day has patients. About 0.4 % of the cells are empty (not measured), and half of the one-row files list their columns in another order, as different instruments do. Everything is a pure function of (patient, modality, study day): regenerating gives the same bytes.
 
 ## Modalities
 
