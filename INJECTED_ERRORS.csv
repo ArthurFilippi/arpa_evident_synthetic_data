@@ -18,6 +18,10 @@ ARPA_078_eeg_D-14.csv,ARPA_078,eeg,D-14,non_numeric,moderate,"two cells hold tex
 ARPA_105_eeg_D-14.csv,ARPA_105,eeg,D-14,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
 ARPA_106_eeg_D-14.csv,ARPA_106,eeg,D-14,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
 ARPA_107_eeg_D-14.csv,ARPA_107,eeg,D-14,partial_columns,minor,"one feature column in five is missing (20 % absent, under the 40 % limit)",received,features_absent
+ARPA_002_endpoint_D-14.csv,ARPA_002,endpoint,D-14,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_100_endpoint_D-14.csv,ARPA_100,endpoint,D-14,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_117_endpoint_D-14.csv,ARPA_117,endpoint,D-14,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_142_endpoint_D-14.csv,ARPA_142,endpoint,D-14,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
 ARPA_027_acti_D-13.csv,ARPA_027,acti,D-13,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
 ARPA_030_acti_D-13.csv,ARPA_030,acti,D-13,identity_column,major,a participant_id column names another patient than the file name and the form,qc_failed,identity_mismatch
 ARPA_031_acti_D-13.csv,ARPA_031,acti,D-13,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
@@ -226,18 +230,6 @@ ARPA_077_mri_D-7.csv,ARPA_077,mri,D-7,column_typo,minor,"one feature name carrie
 ARPA_091_mri_D-7.csv,ARPA_091,mri,D-7,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
 ARPA_099_mri_D-7.csv,ARPA_099,mri,D-7,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
 ARPA_111_mri_D-7.csv,ARPA_111,mri,D-7,two_rows,major,two data rows where an acquisition file has exactly one,qc_failed,row_count
-ARPA_002_psg_D-7.csv,ARPA_002,psg,D-7,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
-ARPA_004_psg_D-7.csv,ARPA_004,psg,D-7,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
-ARPA_019_psg_D-7.csv,ARPA_019,psg,D-7,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
-ARPA_028_psg_D-7.csv,ARPA_028,psg,D-7,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
-ARPA_060_psg_D-7.csv,ARPA_060,psg,D-7,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
-ARPA_088_psg_D-7.csv,ARPA_088,psg,D-7,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
-ARPA_089_psg_D-7.csv,ARPA_089,psg,D-7,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
-ARPA_094_psg_D-7.csv,ARPA_094,psg,D-7,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
-ARPA_096_psg_D-7.csv,ARPA_096,psg,D-7,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
-ARPA_100_psg_D-7.csv,ARPA_100,psg,D-7,column_typo,minor,"one feature name carries a typo (an x at the end): unknown column, and the real feature is absent",received,unknown_features features_absent
-ARPA_112_psg_D-7.csv,ARPA_112,psg,D-7,partial_columns,minor,"one feature column in five is missing (20 % absent, under the 40 % limit)",received,features_absent
-ARPA_120_psg_D-7.csv,ARPA_120,psg,D-7,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
 ARPA_023_acti_D-6.csv,ARPA_023,acti,D-6,identity_column,major,a participant_id column names another patient than the file name and the form,qc_failed,identity_mismatch
 ARPA_036_acti_D-6.csv,ARPA_036,acti,D-6,duplicate_column,moderate,the same feature appears in two columns,qc_failed,duplicate_features
 ARPA_049_acti_D-6.csv,ARPA_049,acti,D-6,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
@@ -336,6 +328,18 @@ ARPA_098_eeg_D-3.csv,ARPA_098,eeg,D-3,column_typo,minor,"one feature name carrie
 ARPA_125_eeg_D-3.csv,ARPA_125,eeg,D-3,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
 ARPA_127_eeg_D-3.csv,ARPA_127,eeg,D-3,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
 ARPA_134_eeg_D-3.csv,ARPA_134,eeg,D-3,column_typo,minor,"one feature name carries a typo (an x at the end): unknown column, and the real feature is absent",received,unknown_features features_absent
+ARPA_002_psg_D-3.csv,ARPA_002,psg,D-3,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
+ARPA_004_psg_D-3.csv,ARPA_004,psg,D-3,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
+ARPA_019_psg_D-3.csv,ARPA_019,psg,D-3,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
+ARPA_028_psg_D-3.csv,ARPA_028,psg,D-3,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
+ARPA_060_psg_D-3.csv,ARPA_060,psg,D-3,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
+ARPA_088_psg_D-3.csv,ARPA_088,psg,D-3,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
+ARPA_089_psg_D-3.csv,ARPA_089,psg,D-3,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
+ARPA_094_psg_D-3.csv,ARPA_094,psg,D-3,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
+ARPA_096_psg_D-3.csv,ARPA_096,psg,D-3,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
+ARPA_100_psg_D-3.csv,ARPA_100,psg,D-3,column_typo,minor,"one feature name carries a typo (an x at the end): unknown column, and the real feature is absent",received,unknown_features features_absent
+ARPA_112_psg_D-3.csv,ARPA_112,psg,D-3,partial_columns,minor,"one feature column in five is missing (20 % absent, under the 40 % limit)",received,features_absent
+ARPA_120_psg_D-3.csv,ARPA_120,psg,D-3,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
 ARPA_001_acti_D-2.csv,ARPA_001,acti,D-2,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
 ARPA_014_acti_D-2.csv,ARPA_014,acti,D-2,partial_columns,minor,"one feature column in five is missing (20 % absent, under the 40 % limit)",received,features_absent
 ARPA_043_acti_D-2.csv,ARPA_043,acti,D-2,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
@@ -399,6 +403,11 @@ ARPA_130_eeg_D0.csv,ARPA_130,eeg,D0,too_much_missing,moderate,55 % of the featur
 ARPA_132_eeg_D0.csv,ARPA_132,eeg,D0,partial_columns,minor,"one feature column in five is missing (20 % absent, under the 40 % limit)",received,features_absent
 ARPA_136_eeg_D0.csv,ARPA_136,eeg,D0,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
 ARPA_140_eeg_D0.csv,ARPA_140,eeg,D0,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
+ARPA_089_endpoint_D0.csv,ARPA_089,endpoint,D0,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_091_endpoint_D0.csv,ARPA_091,endpoint,D0,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_095_endpoint_D0.csv,ARPA_095,endpoint,D0,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_110_endpoint_D0.csv,ARPA_110,endpoint,D0,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_120_endpoint_D0.csv,ARPA_120,endpoint,D0,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
 ARPA_001_acti_D+1.csv,ARPA_001,acti,D+1,column_typo,minor,"one feature name carries a typo (an x at the end): unknown column, and the real feature is absent",received,unknown_features features_absent
 ARPA_005_acti_D+1.csv,ARPA_005,acti,D+1,too_much_missing,moderate,55 % of the feature columns are missing (over the 40 % limit),qc_failed,too_much_missing features_absent
 ARPA_015_acti_D+1.csv,ARPA_015,acti,D+1,column_typo,minor,"one feature name carries a typo (an x at the end): unknown column, and the real feature is absent",received,unknown_features features_absent
@@ -465,6 +474,19 @@ ARPA_106_eeg_D+3.csv,ARPA_106,eeg,D+3,partial_columns,minor,"one feature column 
 ARPA_114_eeg_D+3.csv,ARPA_114,eeg,D+3,too_much_missing,moderate,55 % of the feature columns are missing (over the 40 % limit),qc_failed,too_much_missing features_absent
 ARPA_128_eeg_D+3.csv,ARPA_128,eeg,D+3,column_typo,minor,"one feature name carries a typo (an x at the end): unknown column, and the real feature is absent",received,unknown_features features_absent
 ARPA_131_eeg_D+3.csv,ARPA_131,eeg,D+3,wrong_delimiter,major,separated by ; instead of commas: the file cannot be read as a table,qc_failed,delimiter
+ARPA_011_psg_D+3.csv,ARPA_011,psg,D+3,partial_columns,minor,"one feature column in five is missing (20 % absent, under the 40 % limit)",received,features_absent
+ARPA_028_psg_D+3.csv,ARPA_028,psg,D+3,column_typo,minor,"one feature name carries a typo (an x at the end): unknown column, and the real feature is absent",received,unknown_features features_absent
+ARPA_035_psg_D+3.csv,ARPA_035,psg,D+3,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
+ARPA_040_psg_D+3.csv,ARPA_040,psg,D+3,partial_columns,minor,"one feature column in five is missing (20 % absent, under the 40 % limit)",received,features_absent
+ARPA_062_psg_D+3.csv,ARPA_062,psg,D+3,column_typo,minor,"one feature name carries a typo (an x at the end): unknown column, and the real feature is absent",received,unknown_features features_absent
+ARPA_092_psg_D+3.csv,ARPA_092,psg,D+3,partial_columns,minor,"one feature column in five is missing (20 % absent, under the 40 % limit)",received,features_absent
+ARPA_093_psg_D+3.csv,ARPA_093,psg,D+3,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
+ARPA_107_psg_D+3.csv,ARPA_107,psg,D+3,too_much_missing,moderate,55 % of the feature columns are missing (over the 40 % limit),qc_failed,too_much_missing features_absent
+ARPA_115_psg_D+3.csv,ARPA_115,psg,D+3,duplicate_column,moderate,the same feature appears in two columns,qc_failed,duplicate_features
+ARPA_116_psg_D+3.csv,ARPA_116,psg,D+3,column_typo,minor,"one feature name carries a typo (an x at the end): unknown column, and the real feature is absent",received,unknown_features features_absent
+ARPA_124_psg_D+3.csv,ARPA_124,psg,D+3,two_rows,major,two data rows where an acquisition file has exactly one,qc_failed,row_count
+ARPA_130_psg_D+3.csv,ARPA_130,psg,D+3,duplicate_column,moderate,the same feature appears in two columns,qc_failed,duplicate_features
+ARPA_138_psg_D+3.csv,ARPA_138,psg,D+3,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
 ARPA_002_acti_D+4.csv,ARPA_002,acti,D+4,too_much_missing,moderate,55 % of the feature columns are missing (over the 40 % limit),qc_failed,too_much_missing features_absent
 ARPA_012_acti_D+4.csv,ARPA_012,acti,D+4,duplicate_column,moderate,the same feature appears in two columns,qc_failed,duplicate_features
 ARPA_074_acti_D+4.csv,ARPA_074,acti,D+4,too_much_missing,moderate,55 % of the feature columns are missing (over the 40 % limit),qc_failed,too_much_missing features_absent
@@ -546,18 +568,6 @@ ARPA_098_acti_D+7.csv,ARPA_098,acti,D+7,non_numeric,moderate,"two cells hold tex
 ARPA_105_acti_D+7.csv,ARPA_105,acti,D+7,column_typo,minor,"one feature name carries a typo (an x at the end): unknown column, and the real feature is absent",received,unknown_features features_absent
 ARPA_109_acti_D+7.csv,ARPA_109,acti,D+7,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
 ARPA_138_acti_D+7.csv,ARPA_138,acti,D+7,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
-ARPA_003_cytof.csv,ARPA_003,cytof,all,timepoint_missing,minor,the last timepoint (t3) is not in the file,validated,timepoint_absent
-ARPA_004_cytof.csv,ARPA_004,cytof,all,column_typo_t,moderate,the column population is written populations: the contract cannot be applied,qc_failed,missing_columns
-ARPA_007_cytof.csv,ARPA_007,cytof,all,timepoint_partial,minor,10 % of the features of one timepoint are missing,received,features_absent
-ARPA_008_cytof.csv,ARPA_008,cytof,all,too_much_missing_t,moderate,70 % of the features of one timepoint are missing,qc_failed,too_much_missing features_absent
-ARPA_019_cytof.csv,ARPA_019,cytof,all,timepoint_missing,minor,the last timepoint (t3) is not in the file,validated,timepoint_absent
-ARPA_032_cytof.csv,ARPA_032,cytof,all,non_numeric_t,moderate,two values of one timepoint hold text,qc_failed,non_numeric
-ARPA_061_cytof.csv,ARPA_061,cytof,all,unknown_feature,minor,one population / marker / stimulation that is not in the reference,validated,unknown_features
-ARPA_074_cytof.csv,ARPA_074,cytof,all,timepoint_partial,minor,10 % of the features of one timepoint are missing,received,features_absent
-ARPA_101_cytof.csv,ARPA_101,cytof,all,wrong_delimiter_t,major,separated by ; instead of commas,qc_failed,delimiter
-ARPA_110_cytof.csv,ARPA_110,cytof,all,timepoint_partial,minor,10 % of the features of one timepoint are missing,received,features_absent
-ARPA_114_cytof.csv,ARPA_114,cytof,all,timepoint_missing,minor,the last timepoint (t3) is not in the file,validated,timepoint_absent
-ARPA_134_cytof.csv,ARPA_134,cytof,all,identity_sample,major,sampleID names another patient than the file,qc_failed,identity_mismatch
 ARPA_005_eeg_D+7.csv,ARPA_005,eeg,D+7,partial_columns,minor,"one feature column in five is missing (20 % absent, under the 40 % limit)",received,features_absent
 ARPA_024_eeg_D+7.csv,ARPA_024,eeg,D+7,partial_columns,minor,"one feature column in five is missing (20 % absent, under the 40 % limit)",received,features_absent
 ARPA_042_eeg_D+7.csv,ARPA_042,eeg,D+7,partial_columns,minor,"one feature column in five is missing (20 % absent, under the 40 % limit)",received,features_absent
@@ -568,6 +578,12 @@ ARPA_072_eeg_D+7.csv,ARPA_072,eeg,D+7,unknown_column,minor,an extra column that 
 ARPA_079_eeg_D+7.csv,ARPA_079,eeg,D+7,empty_file,major,a file of zero bytes,qc_failed,empty
 ARPA_082_eeg_D+7.csv,ARPA_082,eeg,D+7,too_much_missing,moderate,55 % of the feature columns are missing (over the 40 % limit),qc_failed,too_much_missing features_absent
 ARPA_102_eeg_D+7.csv,ARPA_102,eeg,D+7,identity_column,major,a participant_id column names another patient than the file name and the form,qc_failed,identity_mismatch
+ARPA_003_endpoint_D+7.csv,ARPA_003,endpoint,D+7,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_035_endpoint_D+7.csv,ARPA_035,endpoint,D+7,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_040_endpoint_D+7.csv,ARPA_040,endpoint,D+7,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_072_endpoint_D+7.csv,ARPA_072,endpoint,D+7,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_107_endpoint_D+7.csv,ARPA_107,endpoint,D+7,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_140_endpoint_D+7.csv,ARPA_140,endpoint,D+7,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
 ARPA_003_mri_D+7.csv,ARPA_003,mri,D+7,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
 ARPA_006_mri_D+7.csv,ARPA_006,mri,D+7,partial_columns,minor,"one feature column in five is missing (20 % absent, under the 40 % limit)",received,features_absent
 ARPA_012_mri_D+7.csv,ARPA_012,mri,D+7,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
@@ -581,19 +597,6 @@ ARPA_103_mri_D+7.csv,ARPA_103,mri,D+7,unknown_column,minor,an extra column that 
 ARPA_114_mri_D+7.csv,ARPA_114,mri,D+7,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
 ARPA_132_mri_D+7.csv,ARPA_132,mri,D+7,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
 ARPA_137_mri_D+7.csv,ARPA_137,mri,D+7,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
-ARPA_011_psg_D+7.csv,ARPA_011,psg,D+7,partial_columns,minor,"one feature column in five is missing (20 % absent, under the 40 % limit)",received,features_absent
-ARPA_028_psg_D+7.csv,ARPA_028,psg,D+7,column_typo,minor,"one feature name carries a typo (an x at the end): unknown column, and the real feature is absent",received,unknown_features features_absent
-ARPA_035_psg_D+7.csv,ARPA_035,psg,D+7,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
-ARPA_040_psg_D+7.csv,ARPA_040,psg,D+7,partial_columns,minor,"one feature column in five is missing (20 % absent, under the 40 % limit)",received,features_absent
-ARPA_062_psg_D+7.csv,ARPA_062,psg,D+7,column_typo,minor,"one feature name carries a typo (an x at the end): unknown column, and the real feature is absent",received,unknown_features features_absent
-ARPA_092_psg_D+7.csv,ARPA_092,psg,D+7,partial_columns,minor,"one feature column in five is missing (20 % absent, under the 40 % limit)",received,features_absent
-ARPA_093_psg_D+7.csv,ARPA_093,psg,D+7,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
-ARPA_107_psg_D+7.csv,ARPA_107,psg,D+7,too_much_missing,moderate,55 % of the feature columns are missing (over the 40 % limit),qc_failed,too_much_missing features_absent
-ARPA_115_psg_D+7.csv,ARPA_115,psg,D+7,duplicate_column,moderate,the same feature appears in two columns,qc_failed,duplicate_features
-ARPA_116_psg_D+7.csv,ARPA_116,psg,D+7,column_typo,minor,"one feature name carries a typo (an x at the end): unknown column, and the real feature is absent",received,unknown_features features_absent
-ARPA_124_psg_D+7.csv,ARPA_124,psg,D+7,two_rows,major,two data rows where an acquisition file has exactly one,qc_failed,row_count
-ARPA_130_psg_D+7.csv,ARPA_130,psg,D+7,duplicate_column,moderate,the same feature appears in two columns,qc_failed,duplicate_features
-ARPA_138_psg_D+7.csv,ARPA_138,psg,D+7,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
 ARPA_015_acti_D+8.csv,ARPA_015,acti,D+8,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
 ARPA_020_acti_D+8.csv,ARPA_020,acti,D+8,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
 ARPA_032_acti_D+8.csv,ARPA_032,acti,D+8,partial_columns,minor,"one feature column in five is missing (20 % absent, under the 40 % limit)",received,features_absent
@@ -776,6 +779,12 @@ ARPA_094_eeg_D+14.csv,ARPA_094,eeg,D+14,two_rows,major,two data rows where an ac
 ARPA_100_eeg_D+14.csv,ARPA_100,eeg,D+14,column_typo,minor,"one feature name carries a typo (an x at the end): unknown column, and the real feature is absent",received,unknown_features features_absent
 ARPA_122_eeg_D+14.csv,ARPA_122,eeg,D+14,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
 ARPA_130_eeg_D+14.csv,ARPA_130,eeg,D+14,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
+ARPA_014_endpoint_D+14.csv,ARPA_014,endpoint,D+14,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_028_endpoint_D+14.csv,ARPA_028,endpoint,D+14,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_077_endpoint_D+14.csv,ARPA_077,endpoint,D+14,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_110_endpoint_D+14.csv,ARPA_110,endpoint,D+14,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_128_endpoint_D+14.csv,ARPA_128,endpoint,D+14,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_134_endpoint_D+14.csv,ARPA_134,endpoint,D+14,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
 ARPA_006_acti_D+15.csv,ARPA_006,acti,D+15,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
 ARPA_010_acti_D+15.csv,ARPA_010,acti,D+15,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
 ARPA_014_acti_D+15.csv,ARPA_014,acti,D+15,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
@@ -1048,6 +1057,16 @@ ARPA_084_acti_D+28.csv,ARPA_084,acti,D+28,partial_columns,minor,"one feature col
 ARPA_097_acti_D+28.csv,ARPA_097,acti,D+28,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
 ARPA_120_acti_D+28.csv,ARPA_120,acti,D+28,column_typo,minor,"one feature name carries a typo (an x at the end): unknown column, and the real feature is absent",received,unknown_features features_absent
 ARPA_137_acti_D+28.csv,ARPA_137,acti,D+28,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
+ARPA_003_cytof.csv,ARPA_003,cytof,all,timepoint_missing,minor,the last timepoint (t7) is not in the file,validated,timepoint_absent
+ARPA_007_cytof.csv,ARPA_007,cytof,all,unknown_feature,minor,one population / marker / stimulation that is not in the reference,validated,unknown_features
+ARPA_008_cytof.csv,ARPA_008,cytof,all,too_much_missing_t,moderate,70 % of the features of one timepoint are missing,qc_failed,too_much_missing features_absent
+ARPA_019_cytof.csv,ARPA_019,cytof,all,timepoint_missing,minor,the last timepoint (t7) is not in the file,validated,timepoint_absent
+ARPA_074_cytof.csv,ARPA_074,cytof,all,timepoint_partial,minor,10 % of the features of one timepoint are missing,received,features_absent
+ARPA_079_cytof.csv,ARPA_079,cytof,all,identity_sample,major,sampleID names another patient than the file,qc_failed,identity_mismatch
+ARPA_082_cytof.csv,ARPA_082,cytof,all,wrong_delimiter_t,major,separated by ; instead of commas,qc_failed,delimiter
+ARPA_101_cytof.csv,ARPA_101,cytof,all,column_typo_t,moderate,the column population is written populations: the contract cannot be applied,qc_failed,missing_columns
+ARPA_110_cytof.csv,ARPA_110,cytof,all,timepoint_partial,minor,10 % of the features of one timepoint are missing,received,features_absent
+ARPA_134_cytof.csv,ARPA_134,cytof,all,non_numeric_t,moderate,two values of one timepoint hold text,qc_failed,non_numeric
 ARPA_001_eeg_D+28.csv,ARPA_001,eeg,D+28,column_typo,minor,"one feature name carries a typo (an x at the end): unknown column, and the real feature is absent",received,unknown_features features_absent
 ARPA_006_eeg_D+28.csv,ARPA_006,eeg,D+28,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
 ARPA_059_eeg_D+28.csv,ARPA_059,eeg,D+28,wrong_delimiter,major,separated by ; instead of commas: the file cannot be read as a table,qc_failed,delimiter
@@ -1056,3 +1075,7 @@ ARPA_089_eeg_D+28.csv,ARPA_089,eeg,D+28,two_rows,major,two data rows where an ac
 ARPA_106_eeg_D+28.csv,ARPA_106,eeg,D+28,unknown_column,minor,an extra column that is no feature (operator_note),validated,unknown_features
 ARPA_113_eeg_D+28.csv,ARPA_113,eeg,D+28,column_typo,minor,"one feature name carries a typo (an x at the end): unknown column, and the real feature is absent",received,unknown_features features_absent
 ARPA_126_eeg_D+28.csv,ARPA_126,eeg,D+28,non_numeric,moderate,"two cells hold text (n.d.) or a decimal comma (1,5)",qc_failed,non_numeric
+ARPA_001_endpoint_D+28.csv,ARPA_001,endpoint,D+28,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_091_endpoint_D+28.csv,ARPA_091,endpoint,D+28,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_099_endpoint_D+28.csv,ARPA_099,endpoint,D+28,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value
+ARPA_122_endpoint_D+28.csv,ARPA_122,endpoint,D+28,missing_score,minor,"one or two scores are empty, NaN or NA",received,missing_value

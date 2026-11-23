@@ -2,9 +2,9 @@
 
 ## Overview
 
-This repository contains fully synthetic, multimodal data designed to simulate the ARPA-EVIDENT study workflow on its real timepoints. It includes 143 fictional participants (`ARPA_001` through `ARPA_143`), with modality-specific acquisitions collected at the study days of the protocol. Each acquisition is stored as a CSV file named `{participant_id}_{modality}_{timepoint}.csv` (CyTOF has no timepoint in its name: one file holds the three timepoints of a patient).
+This repository contains fully synthetic, multimodal data designed to simulate the ARPA-EVIDENT study workflow on its real timepoints. It includes 143 fictional participants (`ARPA_001` through `ARPA_143`), with modality-specific acquisitions collected at the study days of the protocol. Each acquisition is stored as a CSV file named `{participant_id}_{modality}_{timepoint}.csv` (CyTOF has no timepoint in its name: one file holds the seven timepoints of a patient).
 
-The repository contains 10,516 primary acquisition files. A patient only has the files of the days it has lived (`last_study_day` in [`roster.csv`](roster.csv)): 87 patients have lived the whole study (D+28), the other 56 are spread over the study, so that every day has patients. About 0.4 % of the cells are empty (not measured), and half of the one-row files list their columns in another order, as different instruments do. Everything is a pure function of (patient, modality, study day): regenerating gives the same bytes.
+The repository contains 11,061 primary acquisition files. A patient only has the files of the days it has lived (`last_study_day` in [`roster.csv`](roster.csv)): 87 patients have lived the whole study (D+28), the other 56 are spread over the study, so that every day has patients. About 0.4 % of the cells are empty (not measured), and half of the one-row files list their columns in another order, as different instruments do. Everything is a pure function of (patient, modality, study day): regenerating gives the same bytes.
 
 ## Modalities
 
@@ -12,17 +12,18 @@ The examples below are a reproducible sample of five feature names from each mod
 
 | Modality | Time points | Files | Number of features | Five example features | Naming |
 |---|---|---:|---:|---|---|
-| CyTOF | `D-7`, `D0`, `D+7` (t1, t2, t3) in one file, sent once D+7 is done | 114 | 1,000 | `NKbright_pP38_IFNa`, `CD8Tnaive_pSTAT3_Unstim`, `Th17_pNFkB_Unstim`, `Basophils_pNFkB_PMAIono`, `Basophils_pSTAT5_IFNa` | `ARPA_012_cytof.csv` |
+| CyTOF | `D-14`, `D0`, `D+1`, `D+3`, `D+7`, `D+14`, `D+28` (t1 to t7) in one file, sent once D+28 is done | 87 | 1,000 | `NKbright_pP38_IFNa`, `CD8Tnaive_pSTAT3_Unstim`, `Th17_pNFkB_Unstim`, `Basophils_pNFkB_PMAIono`, `Basophils_pSTAT5_IFNa` | `ARPA_012_cytof.csv` |
 | MRI | `D-7`, `D+7` | 248 | 2,010 | `Putamen_NAcc_corr`, `TPJ_AntLoss1_beta`, `SupramarginalGyrus_Operculum_corr`, `Habenula_AntLoss5_beta`, `Amygdala_Hypothalamus_corr` | `ARPA_012_mri_D-7.csv` |
 | EEG | daily from `D-14` through `D+28` | 4,953 | 50 | `N2_sigma_O2_power`, `N3_beta_O2_power`, `N2_delta_Cz_power`, `N2_theta_Cz_power`, `pct_N1` | `ARPA_012_eeg_D-14.csv` |
-| PSG | `D-7`, `D+7` | 248 | 248 | `REM_sigma_C4_power`, `REM_delta_F3_power`, `N2_delta_C4_power`, `N3_sigma_O2_power`, `ECG_REM_SDNN` | `ARPA_012_psg_D-7.csv` |
+| PSG | `D-3`, `D+3` | 247 | 248 | `REM_sigma_C4_power`, `REM_delta_F3_power`, `N2_delta_C4_power`, `N3_sigma_O2_power`, `ECG_REM_SDNN` | `ARPA_012_psg_D-3.csv` |
 | Actigraphy | daily from `D-14` through `D+28` | 4,953 | 50 | `phys_SOL`, `phone_calls_n_night`, `phys_hr_max`, `geo_transitions_24h`, `geo_n_places_night` | `ARPA_012_acti_D-14.csv` |
+| Clinical endpoint | `D-14`, `D0`, `D+7`, `D+14`, `D+28` | 573 | 3 | `CAPS5`, `MADRS`, `YBOCS` | `ARPA_012_endpoint_D+7.csv` |
 
-CyTOF is a long table (population, reagent, stimulation, sampleID, group, time, feature, one row per feature and timepoint); the other modalities are one row of features per file.
+CyTOF is a long table (population, reagent, stimulation, sampleID, group, time, feature, one row per feature and timepoint); the other modalities are one row of features per file. The clinical endpoint holds three integer scores per file (`YBOCS`, `MADRS`, `CAPS5`).
 
 ## Intentionally injected errors
 
-1057 files out of 10,516 (10.1%) contain one deliberate error, graded from a warning to an unreadable file: 617 minor, 343 moderate, 97 major. Their machine-readable specification (file, kind, severity, expected status and flags) is available in [`INJECTED_ERRORS.csv`](INJECTED_ERRORS.csv). The hub never discards a file: it stores it, flags it, and the status tells how far it can be trusted.
+1080 files out of 11,061 (9.8%) contain one deliberate error, graded from a warning to an unreadable file: 640 minor, 343 moderate, 97 major. Their machine-readable specification (file, kind, severity, expected status and flags) is available in [`INJECTED_ERRORS.csv`](INJECTED_ERRORS.csv). The hub never discards a file: it stores it, flags it, and the status tells how far it can be trusted.
 
 | Severity | Meaning | Expected handling |
 |---|---|---|
@@ -45,12 +46,18 @@ CyTOF is a long table (population, reagent, stimulation, sampleID, group, time, 
 | `two_rows` | major | 21 | two data rows where an acquisition file has exactly one | `row_count` | `qc_failed` |
 | `empty_file` | major | 7 | a file of zero bytes | `empty` | `qc_failed` |
 
+### Clinical endpoint files (binary flag: a missing score)
+
+| Kind | Severity | Files | Injected error | Expected flags | Expected status |
+|---|---|---:|---|---|---|
+| `missing_score` | minor | 25 | one or two scores are empty, NaN or NA | `missing_value` | `received` |
+
 ### CyTOF files
 
 | Kind | Severity | Files | Injected error | Expected flags | Expected status |
 |---|---|---:|---|---|---|
-| `timepoint_missing` | minor | 3 | the last timepoint (t3) is not in the file | `timepoint_absent` | `validated` |
-| `timepoint_partial` | minor | 3 | 10 % of the features of one timepoint are missing | `features_absent` | `received` |
+| `timepoint_missing` | minor | 2 | the last timepoint (t7) is not in the file | `timepoint_absent` | `validated` |
+| `timepoint_partial` | minor | 2 | 10 % of the features of one timepoint are missing | `features_absent` | `received` |
 | `unknown_feature` | minor | 1 | one population / marker / stimulation that is not in the reference | `unknown_features` | `validated` |
 | `too_much_missing_t` | moderate | 1 | 70 % of the features of one timepoint are missing | `too_much_missing`, `features_absent` | `qc_failed` |
 | `non_numeric_t` | moderate | 1 | two values of one timepoint hold text | `non_numeric` | `qc_failed` |
@@ -58,7 +65,7 @@ CyTOF is a long table (population, reagent, stimulation, sampleID, group, time, 
 | `identity_sample` | major | 1 | `sampleID` names another patient than the file | `identity_mismatch` | `qc_failed` |
 | `wrong_delimiter_t` | major | 1 | separated by `;` instead of commas | `delimiter` | `qc_failed` |
 
-Flawed files per modality: CyTOF 12 of 114, MRI 29 of 248, PSG 25 of 248, EEG 508 of 4,953, Actigraphy 483 of 4,953.
+Flawed files per modality: CyTOF 10 of 87, MRI 29 of 248, PSG 25 of 247, EEG 508 of 4,953, Actigraphy 483 of 4,953, Clinical endpoint 25 of 573.
 
 The hub's tests (`tests/test_error_catalogue.py`) force every kind on one file and check the answer, so this table is verified, not only written.
 
