@@ -17,7 +17,7 @@ The examples below are a reproducible sample of five feature names from each mod
 | EEG | daily from `D-14` through `D+28` | 4,953 | 50 | `N2_sigma_O2_power`, `N3_beta_O2_power`, `N2_delta_Cz_power`, `N2_theta_Cz_power`, `pct_N1` | `ARPA_012_eeg_D-14.csv` |
 | PSG | `D-3`, `D+3` | 247 | 248 | `REM_sigma_C4_power`, `REM_delta_F3_power`, `N2_delta_C4_power`, `N3_sigma_O2_power`, `ECG_REM_SDNN` | `ARPA_012_psg_D-3.csv` |
 | Actigraphy | daily from `D-14` through `D+28` | 4,953 | 50 | `phys_SOL`, `phone_calls_n_night`, `phys_hr_max`, `geo_transitions_24h`, `geo_n_places_night` | `ARPA_012_acti_D-14.csv` |
-| Clinical endpoint | `D-14`, `D0`, `D+7`, `D+14`, `D+28` | 573 | 3 | `CAPS5`, `MADRS`, `YBOCS` | `ARPA_012_endpoint_D+7.csv` |
+| Endpoint | `D-14`, `D0`, `D+7`, `D+14`, `D+28` | 573 | 3 | `CAPS5`, `MADRS`, `YBOCS` | `ARPA_012_endpoint_D+7.csv` |
 
 CyTOF is a long table (population, reagent, stimulation, sampleID, group, time, feature, one row per feature and timepoint); the other modalities are one row of features per file. The clinical endpoint holds three integer scores per file (`YBOCS`, `MADRS`, `CAPS5`).
 
@@ -46,7 +46,7 @@ CyTOF is a long table (population, reagent, stimulation, sampleID, group, time, 
 | `two_rows` | major | 21 | two data rows where an acquisition file has exactly one | `row_count` | `qc_failed` |
 | `empty_file` | major | 7 | a file of zero bytes | `empty` | `qc_failed` |
 
-### Clinical endpoint files (binary flag: a missing score)
+### Endpoint files (binary flag: a missing score)
 
 | Kind | Severity | Files | Injected error | Expected flags | Expected status |
 |---|---|---:|---|---|---|
@@ -65,7 +65,7 @@ CyTOF is a long table (population, reagent, stimulation, sampleID, group, time, 
 | `identity_sample` | major | 1 | `sampleID` names another patient than the file | `identity_mismatch` | `qc_failed` |
 | `wrong_delimiter_t` | major | 1 | separated by `;` instead of commas | `delimiter` | `qc_failed` |
 
-Flawed files per modality: CyTOF 10 of 87, MRI 29 of 248, PSG 25 of 247, EEG 508 of 4,953, Actigraphy 483 of 4,953, Clinical endpoint 25 of 573.
+Flawed files per modality: CyTOF 10 of 87, MRI 29 of 248, PSG 25 of 247, EEG 508 of 4,953, Actigraphy 483 of 4,953, Endpoint 25 of 573.
 
 The hub's tests (`tests/test_error_catalogue.py`) force every kind on one file and check the answer, so this table is verified, not only written.
 
